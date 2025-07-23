@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 /* Form Styles */
@@ -27,7 +28,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 1rem;
+    margin: 0 0 1rem 0;
     border-bottom: 0.2rem solid orange;
     border-radius: 1rem;
     -webkit-box-shadow: 0px 10px 8px -5px orange;

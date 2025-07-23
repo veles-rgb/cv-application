@@ -1,6 +1,7 @@
 #objective-container {
     grid-column: 1 / -1;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 #objective-container label {

@@ -1,0 +1,28 @@
+button {
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media print {
+    button {
+        display: none !important;
+    }
+
+    input[type="submit"] {
+        display: none !important;
+    }
+}

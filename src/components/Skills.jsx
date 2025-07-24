@@ -43,10 +43,9 @@ function Skills() {
         <form onSubmit={handleSubmit}>
           <h1>Skills</h1>
           {skillsList.map((skill, index) => (
-            <label>
+            <label key={index}>
               <input
                 onChange={(e) => handleSkillUpdate(e, index)}
-                key={index}
                 type="text"
                 value={skill}
               ></input>

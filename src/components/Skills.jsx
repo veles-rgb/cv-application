@@ -4,12 +4,14 @@ import '../styles/Skills.css';
 function Skills() {
   const [editMode, setEditMode] = useState(true);
   const [skillsList, setSkillsList] = useState([
-    'Skill 1',
-    'Skill 2',
-    'Skill 3',
-    'Skill 4',
-    'Skill 5',
-    'SKill 6',
+    'Database management',
+    'Computer literacy',
+    'Scheduling appointments',
+    'Microsoft Office Suite',
+    'Multiline phone telephone system',
+    'Adaptability',
+    'Document filing',
+    'Time management',
   ]);
 
   const handleSubmit = (e) => {

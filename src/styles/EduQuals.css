@@ -1,0 +1,28 @@
+#edu-quals-container {
+    grid-column: 1 / -1;
+}
+
+#edu-quals-container form ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edu-quals-container label {}
+
+.edu-qual-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-qual-item-top,
+.edu-qual-item-bottom {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edu-degree-type,
+.edu-school {
+    font-weight: 900;
+}

@@ -3,6 +3,7 @@ import General from './components/General';
 import Objective from './components/Objective';
 import Skills from './components/Skills';
 import ProSkills from './components/ProSkills';
+import WorkHistory from './components/WorkHistory';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Objective />
       <Skills />
       <ProSkills />
+      <WorkHistory />
     </div>
   );
 }

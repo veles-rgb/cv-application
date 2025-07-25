@@ -1,0 +1,19 @@
+#work-history-container {
+    grid-column: 1 / -1;
+}
+
+.work-history-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-item-top,
+.work-item-bottom {
+    display: flex;
+    gap: 1rem;
+}
+
+.work-position,
+.work-company {
+    font-weight: 900;
+}

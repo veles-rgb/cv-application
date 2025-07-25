@@ -4,6 +4,7 @@ import Objective from './components/Objective';
 import Skills from './components/Skills';
 import ProSkills from './components/ProSkills';
 import WorkHistory from './components/WorkHistory';
+import EduQuals from './components/EduQuals';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Skills />
       <ProSkills />
       <WorkHistory />
+      <EduQuals />
     </div>
   );
 }

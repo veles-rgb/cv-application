@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import ProSkills from './components/ProSkills';
 import WorkHistory from './components/WorkHistory';
 import EduQuals from './components/EduQuals';
+import Languages from './components/Languages';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ProSkills />
       <WorkHistory />
       <EduQuals />
+      <Languages />
     </div>
   );
 }

@@ -49,4 +49,23 @@ input[type="submit"] {
     input[type="submit"] {
         display: none !important;
     }
+
+    .skill-bar-container {
+        display: flex !important;
+        gap: 4px;
+    }
+
+    .skill-bar-segment {
+        width: 20px;
+        height: 8px;
+        border: 1px solid #999;
+        background-color: #ccc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .skill-bar-segment.filled {
+        background-color: orange !important;
+        border-color: orange !important;
+    }
 }

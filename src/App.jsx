@@ -29,6 +29,10 @@ function App() {
     languagesRef,
   ];
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <div id="app">
       <General ref={generalRef} />
@@ -41,6 +45,9 @@ function App() {
       <div id="action-buttons">
         <SubmitAll sections={allRefs} />
         <EditAll sections={allRefs} />
+        <button id="print-btn" onClick={handlePrint}>
+          Print
+        </button>
       </div>
     </div>
   );

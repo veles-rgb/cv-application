@@ -67,6 +67,14 @@ input[type="submit"] {
     height: 3rem;
 }
 
+#action-buttons #print-btn {
+    background-color: black;
+}
+
+#action-buttons #submit-all-btn {
+    background-color: blue;
+}
+
 #app {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useImperativeHandle, forwardRef } from 'react';
 import '../styles/General.css';
 
-function General() {
+const General = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [name, setName] = useState('John Doe');
   const [location, setLocation] = useState('Toronto, CA A1B 2C3');
@@ -27,6 +27,10 @@ function General() {
   function handleEdit() {
     setEditMode(true);
   }
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   return (
     <div id="general-container">
@@ -86,6 +90,6 @@ function General() {
       )}
     </div>
   );
-}
+});
 
 export default General;

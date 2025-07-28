@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useImperativeHandle, forwardRef } from 'react';
+
 import '../styles/WorkHistory.css';
 
-function WorkHistory() {
+const WorkHistory = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [workHistoryList, setWorkHistoryList] = useState([
     {
@@ -37,6 +38,10 @@ function WorkHistory() {
     const updatedHistory = workHistoryList.filter((_, i) => i !== index);
     setWorkHistoryList(updatedHistory);
   };
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   return (
     <div id="work-history-container">
@@ -106,6 +111,6 @@ function WorkHistory() {
       )}
     </div>
   );
-}
+});
 
 export default WorkHistory;

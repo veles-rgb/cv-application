@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useImperativeHandle, forwardRef } from 'react';
 import '../styles/Skills.css';
 
-function Skills() {
+const Skills = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [skillsList, setSkillsList] = useState([
     'Database management',
@@ -36,6 +36,10 @@ function Skills() {
     const updatedSkills = skillsList.filter((_, i) => i !== index);
     setSkillsList(updatedSkills);
   };
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   return (
     <div id="skills-container">
@@ -78,6 +82,6 @@ function Skills() {
       )}
     </div>
   );
-}
+});
 
 export default Skills;

@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useImperativeHandle, forwardRef } from 'react';
 import '../styles/ProSkills.css';
 
-function ProSkills() {
+const ProSkills = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [proSkillsList, setProSkillsList] = useState([
     {
@@ -74,6 +74,10 @@ function ProSkills() {
     updatedSkills[skillIndex].items[itemIndex] = e.target.value;
     setProSkillsList(updatedSkills);
   };
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   return (
     <div id="pro-skills-container">
@@ -150,6 +154,6 @@ function ProSkills() {
       )}
     </div>
   );
-}
+});
 
 export default ProSkills;

@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useImperativeHandle, forwardRef } from 'react';
 import '../styles/EduQuals.css';
 
-function EduQuals() {
+const EduQuals = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [eduQualsList, setEduQualsList] = useState([
     {
@@ -73,6 +73,10 @@ function EduQuals() {
       setEduQualsList(updatedList);
     }
   };
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   return (
     <div id="edu-quals-container">
@@ -186,6 +190,6 @@ function EduQuals() {
       )}
     </div>
   );
-}
+});
 
 export default EduQuals;

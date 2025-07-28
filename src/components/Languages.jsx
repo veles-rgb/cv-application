@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useImperativeHandle, forwardRef } from 'react';
 import '../styles/Languages.css';
 
-function Languages() {
+const Languages = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [languagesList, setLanguagesList] = useState([
     { language: 'English', rating: 5 },
@@ -26,6 +26,10 @@ function Languages() {
     const updatedList = languagesList.filter((_, i) => i !== index);
     setLanguagesList(updatedList);
   };
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   const SkillBar = ({ level, max = 5 }) => {
     return (
@@ -118,6 +122,6 @@ function Languages() {
       )}
     </div>
   );
-}
+});
 
 export default Languages;

@@ -87,12 +87,16 @@ function Languages() {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <button type="button" onClick={(e) => handleDelete(e, index)}>
+              <button
+                className="del-btn"
+                type="button"
+                onClick={(e) => handleDelete(e, index)}
+              >
                 Delete
               </button>
             </label>
           ))}
-          <button type="button" onClick={handleAdd}>
+          <button className="add-btn" type="button" onClick={handleAdd}>
             Add Language
           </button>
           <input type="submit" value="Submit" />
@@ -107,7 +111,7 @@ function Languages() {
               <SkillDesc level={parseInt(language.rating)} />
             </div>
           ))}
-          <button type="button" onClick={handleEditMode}>
+          <button className="edit-btn" type="button" onClick={handleEditMode}>
             Edit
           </button>
         </>

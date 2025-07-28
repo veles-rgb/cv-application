@@ -36,7 +36,9 @@ function Objective() {
         <>
           <h2>Career Objective</h2>
           <p>{objectiveData}</p>
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Edit
+          </button>
         </>
       )}
     </div>

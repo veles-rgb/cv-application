@@ -89,6 +89,7 @@ function ProSkills() {
                 value={skill.title}
               />
               <button
+                className="del-btn"
                 type="button"
                 onClick={(e) => handleSkillDelete(e, index)}
               >
@@ -106,6 +107,7 @@ function ProSkills() {
                       value={item}
                     />
                     <button
+                      className="del-btn"
                       onClick={(e) =>
                         handleSkillItemDelete(e, index, itemIndex)
                       }
@@ -116,6 +118,7 @@ function ProSkills() {
                   </li>
                 ))}
                 <button
+                  className="add-btn"
                   type="button"
                   onClick={(e) => handleAddSkillItem(e, index)}
                 >
@@ -124,7 +127,7 @@ function ProSkills() {
               </ul>
             </label>
           ))}
-          <button onClick={handleAddSkill} type="button">
+          <button className="add-btn" onClick={handleAddSkill} type="button">
             Add Skill
           </button>
           <input type="submit" value="Submit" />
@@ -140,7 +143,9 @@ function ProSkills() {
               ))}
             </ul>
           ))}
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Edit
+          </button>
         </>
       )}
     </div>

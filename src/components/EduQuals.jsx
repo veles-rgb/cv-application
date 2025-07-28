@@ -112,6 +112,7 @@ function EduQuals() {
                 value={eduQual.location}
               />
               <button
+                className="del-btn"
                 type="button"
                 onClick={(e) => handleDelete(e, index, null)}
               >
@@ -129,6 +130,7 @@ function EduQuals() {
                       value={qual}
                     />
                     <button
+                      className="del-btn"
                       type="button"
                       onClick={(e) => handleDelete(e, index, qualIndex, false)}
                     >
@@ -137,6 +139,7 @@ function EduQuals() {
                   </li>
                 ))}
                 <button
+                  className="add-btn"
                   type="button"
                   onClick={(e) => handleAdd(e, index, 'quals')}
                 >
@@ -145,7 +148,11 @@ function EduQuals() {
               </ul>
             </label>
           ))}
-          <button type="button" onClick={(e) => handleAdd(e, null, 'main')}>
+          <button
+            className="add-btn"
+            type="button"
+            onClick={(e) => handleAdd(e, null, 'main')}
+          >
             Add Section
           </button>
           <input type="submit" value="Submit" />
@@ -172,7 +179,9 @@ function EduQuals() {
               </ul>
             </div>
           ))}
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Edit
+          </button>
         </>
       )}
     </div>

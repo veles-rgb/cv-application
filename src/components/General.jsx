@@ -79,7 +79,9 @@ function General() {
           <div id="information-container">
             {location} • Phone: {phone} • Email: {email}
           </div>
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Edit
+          </button>
         </>
       )}
     </div>

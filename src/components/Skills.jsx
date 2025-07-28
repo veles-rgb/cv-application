@@ -50,6 +50,7 @@ function Skills() {
                 value={skill}
               ></input>
               <button
+                className="del-btn"
                 type="button"
                 onClick={(e) => handleDeleteSkill(e, index)}
               >
@@ -57,7 +58,7 @@ function Skills() {
               </button>
             </label>
           ))}
-          <button type="button" onClick={handleAddSkill}>
+          <button className="add-btn" type="button" onClick={handleAddSkill}>
             Add Skill
           </button>
           <input type="submit" value="Submit" />
@@ -70,7 +71,9 @@ function Skills() {
               <li>{skill}</li>
             ))}
           </ul>
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Edit
+          </button>
         </>
       )}
     </div>

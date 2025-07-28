@@ -70,6 +70,7 @@ function WorkHistory() {
                 value={work.location}
               />
               <button
+                className="del-btn"
                 type="button"
                 onClick={(e) => handleHistoryDelete(e, index)}
               >
@@ -77,7 +78,7 @@ function WorkHistory() {
               </button>
             </label>
           ))}
-          <button type="button" onClick={handleAddHistory}>
+          <button className="add-btn" type="button" onClick={handleAddHistory}>
             Add History
           </button>
           <input type="submit" value="Submit" />
@@ -98,7 +99,9 @@ function WorkHistory() {
               </div>
             </div>
           ))}
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-btn" onClick={handleEdit}>
+            Edit
+          </button>
         </>
       )}
     </div>

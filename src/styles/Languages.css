@@ -3,6 +3,20 @@
     margin-bottom: 2rem;
 }
 
+#languages-container label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#languages-container select {
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+    border: 2px solid orange;
+}
+
 .skill-bar-container {
     display: flex;
     gap: 4px;

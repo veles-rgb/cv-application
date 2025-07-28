@@ -93,7 +93,7 @@ function ProSkills() {
                 type="button"
                 onClick={(e) => handleSkillDelete(e, index)}
               >
-                Delete
+                Delete Skill
               </button>
               <ul>
                 {skill.items?.map((item, itemIndex) => (

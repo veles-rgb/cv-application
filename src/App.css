@@ -16,6 +16,14 @@ form {
     margin-bottom: 1rem;
 }
 
+label {
+    margin-bottom: 1rem;
+}
+
+span {
+    font-weight: 900;
+}
+
 input[type="text"],
 textarea {
     border: 2px solid orange;

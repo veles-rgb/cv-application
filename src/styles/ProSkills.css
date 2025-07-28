@@ -1,3 +1,11 @@
 #pro-skills-container {
     grid-column: 1 / -1;
 }
+
+#pro-skills-container form ul {
+    margin-bottom: 0.5rem;
+}
+
+#pro-skills-container form li {
+    list-style: none;
+}

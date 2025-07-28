@@ -2,6 +2,26 @@
     grid-column: 1 / -1;
 }
 
+#work-history-container form ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#work-history-container form li {
+    list-style: none;
+}
+
+#work-history-container label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .work-history-item {
     display: flex;
     flex-direction: column;

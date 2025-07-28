@@ -1,0 +1,22 @@
+#languages-container {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+.skill-bar-container {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.skill-bar-segment {
+    width: 100px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.skill-bar-segment.filled {
+    background-color: orange;
+}

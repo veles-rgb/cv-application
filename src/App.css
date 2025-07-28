@@ -54,6 +54,19 @@ input[type="submit"] {
     background-color: red;
 }
 
+#action-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#action-buttons button {
+    background-color: orange;
+    width: 10rem;
+    height: 3rem;
+}
+
 #app {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

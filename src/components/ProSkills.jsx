@@ -31,7 +31,9 @@ const ProSkills = forwardRef((props, ref) => {
   ]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e?.preventDefault) {
+      e.preventDefault();
+    }
     setEditMode(false);
   };
   function handleEdit() {
@@ -77,6 +79,7 @@ const ProSkills = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     submit: handleSubmit,
+    edit: handleEdit,
   }));
 
   return (

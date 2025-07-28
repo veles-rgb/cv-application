@@ -11,7 +11,9 @@ const Objective = forwardRef((props, ref) => {
     setObjectiveData(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e?.preventDefault) {
+      e.preventDefault();
+    }
     setEditMode(false);
   };
   function handleEdit() {
@@ -19,6 +21,7 @@ const Objective = forwardRef((props, ref) => {
   }
   useImperativeHandle(ref, () => ({
     submit: handleSubmit,
+    edit: handleEdit,
   }));
 
   return (

@@ -19,7 +19,9 @@ const EduQuals = forwardRef((props, ref) => {
   ]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e?.preventDefault) {
+      e.preventDefault();
+    }
     setEditMode(false);
   };
 
@@ -76,6 +78,7 @@ const EduQuals = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     submit: handleSubmit,
+    edit: handleEdit,
   }));
 
   return (

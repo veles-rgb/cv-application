@@ -14,7 +14,9 @@ const WorkHistory = forwardRef((props, ref) => {
   ]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e?.preventDefault) {
+      e.preventDefault();
+    }
     setEditMode(false);
   };
   function handleEdit() {
@@ -41,6 +43,7 @@ const WorkHistory = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     submit: handleSubmit,
+    edit: handleEdit,
   }));
 
   return (

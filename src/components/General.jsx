@@ -21,7 +21,9 @@ const General = forwardRef((props, ref) => {
     setEmail(e.target.value);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e?.preventDefault) {
+      e.preventDefault();
+    }
     setEditMode(false);
   };
   function handleEdit() {
@@ -30,6 +32,7 @@ const General = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     submit: handleSubmit,
+    edit: handleEdit,
   }));
 
   return (

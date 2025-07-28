@@ -7,11 +7,13 @@ const Languages = forwardRef((props, ref) => {
     { language: 'English', rating: 5 },
   ]);
 
-  const handleEditMode = () => {
+  const handleEdit = () => {
     setEditMode(true);
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    if (e?.preventDefault) {
+      e.preventDefault();
+    }
     setEditMode(false);
   };
   const handleUpdate = (e, index, item) => {
@@ -29,6 +31,7 @@ const Languages = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     submit: handleSubmit,
+    edit: handleEdit,
   }));
 
   const SkillBar = ({ level, max = 5 }) => {
@@ -115,7 +118,7 @@ const Languages = forwardRef((props, ref) => {
               <SkillDesc level={parseInt(language.rating)} />
             </div>
           ))}
-          <button className="edit-btn" type="button" onClick={handleEditMode}>
+          <button className="edit-btn" type="button" onClick={handleEdit}>
             Edit
           </button>
         </>

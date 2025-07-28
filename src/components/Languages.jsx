@@ -5,6 +5,7 @@ const Languages = forwardRef((props, ref) => {
   const [editMode, setEditMode] = useState(true);
   const [languagesList, setLanguagesList] = useState([
     { language: 'English', rating: 5 },
+    { language: 'French', rating: 3 },
   ]);
 
   const handleEdit = () => {
